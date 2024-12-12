@@ -1,0 +1,66 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Styling for form container */
+.form-container {
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    max-width: 400px; /* Max width of the container */
+    width: 100%;
+}
+
+/* Form heading */
+.form-container h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333; /* Dark grey for the heading */
+    text-align: center;
+}
+
+/* Form label */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555; /* Medium grey for labels */
+}
+
+/* Form input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Form button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4682b4; /* Steel Blue background */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #4169e1; /* Royal Blue */
+}

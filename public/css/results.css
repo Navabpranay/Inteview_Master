@@ -1,0 +1,54 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Styling for the results container */
+h1 {
+    font-size: 2em;
+    color: #2d5a80;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Score display styling */
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+p:nth-of-type(2) {
+    font-weight: bold;
+    color: #2d5a80;
+}
+
+p:nth-of-type(3) {
+    font-size: 1em;
+    color: #555;
+    font-style: italic;
+}
+
+/* Pass/fail message styling */
+p:nth-of-type(2).pass {
+    color: #4CAF50; /* Green color for pass */
+}
+
+p:nth-of-type(2).fail {
+    color: #E53935; /* Red color for fail */
+}
+
+/* Suggested materials */
+p:last-of-type {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}

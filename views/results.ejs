@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= topic %> Exam Results</title>
+    <link rel="stylesheet" href="/css/results.css">
+</head>
+<body>
+    <h1><%= topic %> Exam Results</h1>
+    <p>Your score: <%= score %> out of <%= total %></p>
+
+    <% if (score >= Math.ceil(total * 0.7)) { %>
+        <p class="pass">Great job! You passed the exam.</p>
+    <% } else { %>
+        <p class="fail">Keep practicing! You didn't pass the exam this time.</p>
+    <% } %>
+
+    <p>Recommended materials:</p>
+
+<div class="materials">
+    <% if (topic === 'java') { %>
+        <ul>
+            <li><a href="https://www.learnjavaonline.org/" target="_blank">Learn Java Online</a></li>
+            <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank">Java Official Tutorial</a></li>
+            <% if (materials.startsWith('Advanced')) { %>
+                <li><a href="https://www.udacity.com/course/java-programming-basics--ud282" target="_blank">Java Programming - Udacity</a></li>
+            <% } else { %>
+                <li><a href="https://www.codecademy.com/learn/learn-java" target="_blank">Java for Beginners - Codecademy</a></li>
+            <% } %>
+        </ul>
+    <% } else if (topic === 'python') { %>
+        <ul>
+            <li><a href="https://www.learnpython.org/" target="_blank">Learn Python Online</a></li>
+            <li><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Documentation</a></li>
+            <% if (materials.startsWith('Advanced')) { %>
+                <li><a href="https://realpython.com/" target="_blank">Real Python - Advanced Python Topics</a></li>
+            <% } else { %>
+                <li><a href="https://www.w3schools.com/python/" target="_blank">Python for Beginners - W3Schools</a></li>
+            <% } %>
+        </ul>
+    <% } else if (topic === 'SQL') { %>
+        <ul>
+            <li><a href="https://www.sqlbolt.com/" target="_blank">SQL Bolt</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">SQL Tutorial - W3Schools</a></li>
+            <% if (materials.startsWith('Advanced')) { %>
+                <li><a href="https://www.udemy.com/course/advanced-sql/" target="_blank">Advanced SQL - Udemy</a></li>
+            <% } else { %>
+                <li><a href="https://www.codecademy.com/learn/learn-sql" target="_blank">SQL for Beginners - Codecademy</a></li>
+            <% } %>
+        </ul>
+    <% } %>
+</div>
+
+</body>
+</html>

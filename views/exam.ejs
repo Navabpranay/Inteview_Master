@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= topic %> Exam</title>
+    <link rel="stylesheet" href="/css/exam.css">
+</head>
+<body>
+    <h1><%= topic %> Exam</h1>
+    <form action="/submit-exam" method="POST">
+        <% questions.forEach((question, index) => { %>
+            <div>
+                <p><%= index + 1 %>. <%= question.question %></p>
+                <input type="radio" name="question_<%= question.id %>" value="A"> <%= question.option_a %><br>
+                <input type="radio" name="question_<%= question.id %>" value="B"> <%= question.option_b %><br>
+                <input type="radio" name="question_<%= question.id %>" value="C"> <%= question.option_c %><br>
+                <input type="radio" name="question_<%= question.id %>" value="D"> <%= question.option_d %><br>
+            </div>
+        <% }); %>
+        <input type="hidden" name="topic" value="<%= topic %>">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

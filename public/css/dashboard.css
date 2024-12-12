@@ -1,0 +1,41 @@
+/* dashboard.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.topic-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.topic-btn:hover {
+    background-color: #0056b3;
+}
